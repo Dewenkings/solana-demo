@@ -3,7 +3,7 @@ import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
 import { useEffect, useState } from 'react'
 import { Airdrop } from './AirDropButton'
 import { LAMPORTS_PER_SOL } from '@solana/web3.js'
-
+import SendSOL from './SendSOL'
 function App() {
   const { publicKey, connected, disconnecting } = useWallet()
   const { connection } = useConnection()
@@ -100,6 +100,7 @@ function App() {
               </div>
             </div>
             <Airdrop onSuccess={refetchBalance} />
+            <SendSOL onSuccess={refetchBalance} />
           </div>
         )}
 
