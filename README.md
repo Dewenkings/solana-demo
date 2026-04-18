@@ -118,6 +118,45 @@ Devnet USDC faucet: https://spl-token-faucet.com/?token-name=USDC
 |----------|-------------|---------|
 | `VITE_SOLANA_RPC_ENDPOINT` | Solana RPC endpoint | `https://api.devnet.solana.com` |
 
+## Screenshots
+
+### Wallet Connected & SOL Balance
+
+![Wallet Connected](screenshots/wallet-connected.png)
+
+*Phantom wallet connected, displaying wallet address and SOL balance on Devnet.*
+
+### SOL Transfer
+
+![Send SOL](screenshots/send-sol.png)
+
+*Initiating a 0.5 SOL transfer to another Devnet address.*
+
+### Transaction Success
+
+![Transaction Success](screenshots/transaction-success.png)
+
+*Transfer submitted successfully with a direct link to Solana Explorer for verification.*
+
+### SPL Token (USDC) Transfer
+
+![Transfer USDC](screenshots/transfer-usdc.png)
+
+*Sending 100 USDC on Devnet. The form handles recipient input, amount validation, and automatic ATA (Associated Token Account) creation if needed.*
+
+---
+
+## Verified Transactions
+
+Below are real Devnet transactions executed through this DApp, verifiable on Solana Explorer:
+
+| Type | Amount | Explorer Link |
+|------|--------|---------------|
+| SOL Transfer | 0.5 SOL | [View on Explorer](https://explorer.solana.com/tx/65ZQ81DyVXv3StWT9BXS4ggoHGeuijTqFes4v4VGah8cdLMhp485vS4uTEHkTSc4B7M5d1AuJjTHZZmLzoN35LBu?cluster=devnet) |
+| SPL Token Transfer (USDC) | 100 USDC | [View on Explorer](https://explorer.solana.com/tx/ekT84STSVF4ZppU9h2W1zSTE11ArHaDH3ZSPfNk4BqhRtmuGoZU7oSF4UsUnyHmVhoEdTpPLcqVdGXKjkA4ofDv?cluster=devnet) |
+
+---
+
 ## References
 
 - [Solana Documentation](https://solana.com/docs)
