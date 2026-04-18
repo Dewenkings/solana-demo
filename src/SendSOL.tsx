@@ -43,12 +43,6 @@ const SendSOL = ({ onSuccess }: SendSOLProps) => {
       return
     }
 
-    // 不能转给自己（虽然技术上可以，但通常没有意义且容易误操作）
-    if (recipientPublicKey.equals(publicKey)) {
-      setError('Cannot send to yourself')
-      return
-    }
-
     setIsLoading(true)
 
     try {
@@ -99,6 +93,11 @@ const SendSOL = ({ onSuccess }: SendSOLProps) => {
           placeholder="Recipient address"
           value={recipient}
           onChange={(e) => setRecipient(e.target.value)}
+          onClick={() => {
+            if (!recipient && publicKey) {
+              setRecipient(publicKey.toString())
+            }
+          }}
           className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
         />
         <div className="relative">

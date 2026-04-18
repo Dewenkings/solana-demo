@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { Airdrop } from './AirDropButton'
 import { LAMPORTS_PER_SOL } from '@solana/web3.js'
 import SendSOL from './SendSOL'
+import { TransferToken } from './TransferToken'
 function App() {
   const { publicKey, connected, disconnecting } = useWallet()
   const { connection } = useConnection()
@@ -101,6 +102,7 @@ function App() {
             </div>
             <Airdrop onSuccess={refetchBalance} />
             <SendSOL onSuccess={refetchBalance} />
+            <TransferToken onSuccess={refetchBalance} />
           </div>
         )}
 
